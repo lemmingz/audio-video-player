@@ -56,15 +56,6 @@ var makeSound = new Class({
 					var pos = this.step;
 				}
 			}).set(0); 			
-			timeSlider.onmousedown = function(){
-				player.currentTime = (pos /* * (player.duration / 100) */);
-			};
-			timeSlider.onmouseup = function(){
-				player.currentTime = (pos /* * (player.duration / 100) */);
-			};
-			timeSlider.onmousemove = function(){
-				player.currentTime = (pos /* * (player.duration / 100) */);
-			};
 			var timer = function(){
 				timeSlider.set(player.currentTime);
 				remaining.set({'html':secToTime(player.currentTime).m + ':' + secToTime(player.currentTime).s});
